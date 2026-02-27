@@ -1,0 +1,18 @@
+# Worlds
+state/
+
+# Configs
+config/
+server.properties
+release-notes.txt
+*.json
+
+# Dist files
+data/
+definitions/
+resource_packs/
+bedrock_server/
+behavior_packs/
+bedrock_server_how_to.html
+profanity_filter.wlist
+bedrock_server
