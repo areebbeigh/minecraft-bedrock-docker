@@ -3,7 +3,6 @@ state/
 
 # Configs
 config/
-server.properties
 release-notes.txt
 *.json
 
