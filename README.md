@@ -63,8 +63,10 @@ State and config are kept **outside** the image: worlds and editable configs liv
 ### Build the image
 
 ```bash
-docker build --platform=linux/amd64 -t bedrock .
+docker build --platform=linux/amd64 -t minecraft-bedrock .
 ```
+
+The image is also available on dockerhub: `docker pull areebbeigh/minecraft-bedrock`
 
 ### Run the server
 
