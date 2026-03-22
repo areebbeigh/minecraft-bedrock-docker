@@ -6,10 +6,12 @@ PORT2=${2:-19133}
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Name of the Docker image
-IMAGE_NAME="bedrock"
+IMAGE_NAME="areebbeigh/minecraft-bedrock"
 
 # Named volume to persist server state (worlds, templates, treatments, etc.)
 STATE_VOLUME="bedrock_state"
+
+mkdir -p state
 
 # Ensure the named volume exists
 if ! docker volume inspect "$STATE_VOLUME" >/dev/null 2>&1; then
