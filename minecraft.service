@@ -1,0 +1,18 @@
+[Unit]
+Description=Minecraft Bedrock Server (tmux)
+After=network.target docker.service
+Requires=docker.service
+
+[Service]
+Type=forking
+User=root
+WorkingDirectory=/root/minecraft-bedrock-docker
+
+ExecStart=/usr/bin/tmux new-session -d -s minecraft './play.sh 2>&1 | tee server.log'
+ExecStop=/usr/bin/tmux kill-session -t minecraft
+
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
