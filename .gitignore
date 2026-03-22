@@ -4,7 +4,6 @@ state/
 # Configs
 config/
 release-notes.txt
-*.json
 
 # Dist files
 data/
