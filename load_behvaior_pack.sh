@@ -32,7 +32,7 @@ if [ ! -f "$WORLD_LOCATION/world_behavior_packs.json" ]; then
     echo "[]" > "$WORLD_LOCATION/world_behavior_packs.json"
 fi
 
-if ! grep -q "$PACK_ID" "$WORLD_LOCATION/behavior_packs/world_behavior_packs.json"; then
+if ! grep -q "$PACK_ID" "$WORLD_LOCATION/world_behavior_packs.json"; then
     echo "Adding pack $PACK_ID to world $WORLD_NAME"
     jq ". += [$PACK_ENTRY_JSON]" "$WORLD_LOCATION/world_behavior_packs.json" > "$WORLD_LOCATION/world_behavior_packs.json.tmp"
     mv "$WORLD_LOCATION/world_behavior_packs.json.tmp" "$WORLD_LOCATION/world_behavior_packs.json"
